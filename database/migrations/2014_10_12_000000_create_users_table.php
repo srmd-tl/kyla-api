@@ -21,8 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('race');
             $table->string('gender');
-            $table->int('age');
-            $table->int('state');
+            $table->integer('age');
+            $table->integer('state');
             $table->string('api_token', 80)->after('password')
                 ->unique()
                 ->nullable()
