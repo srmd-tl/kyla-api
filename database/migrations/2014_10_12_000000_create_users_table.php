@@ -23,10 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('gender');
             $table->integer('age');
             $table->integer('state');
-            $table->string('api_token', 80)->after('password')
-                ->unique()
-                ->nullable()
-                ->default(null);
+            $table->string('api_token', 80)->unique();
             $table->rememberToken();
             $table->timestamps();
         });
