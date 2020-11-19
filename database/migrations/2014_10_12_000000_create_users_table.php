@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('race');
             $table->string('gender');
             $table->integer('age');
-            $table->integer('state');
+            $table->string('state');
             $table->string('api_token', 80)->unique()->nullable();
             $table->rememberToken();
             $table->timestamps();
