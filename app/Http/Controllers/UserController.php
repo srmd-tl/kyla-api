@@ -21,6 +21,7 @@ class UserController extends Controller
                 "password" => "required"
             ]
         );
+
         $data =
             [
                 "name" => request()->name,
