@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
+    /**
+     * @return mixed
+     */
     public function register()
     {
         request()->validate(
@@ -35,4 +40,23 @@ class UserController extends Controller
         $user = User::create($data);
         return response()->success($user);
     }
+
+    public function login()
+    {
+        $flag = false;
+        $token = Str::random(60);
+        request()->validate(["email" => "required", "password" => "required"]);
+        $user = User::whereEmail(request()->email)->first();
+        if ($user && Hash::check(request()->password, $user->password)) {
+            $user->update(['api_token' => hash('sha256', $token)]);
+            Auth::login($user);
+            $flag = true;
+        }
+        if ($flag) {
+            return response()->success($token);
+        }
+        return response()->error("Invalid Email or Password");
+
+    }
+
 }
