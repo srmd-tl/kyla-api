@@ -28,3 +28,7 @@ Route::get('login', function () {
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+//Races
+Route::get('races',[\App\Http\Controllers\GenericController::class,'races']);
