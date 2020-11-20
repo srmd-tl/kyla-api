@@ -79,7 +79,7 @@ class UserController extends Controller
             }
             return view('newPassword',["id"=>$user->id]);
         }
-        $user->update(["password" => Hash::make(request()->password)]);
+        $user->update(["password" => Hash::make(request()->password),"api_token"=>null]);
         return "Password UPdated!";
     }
 

@@ -21,13 +21,14 @@ Route::post('login', [UserController::class, 'login'])->name('user.login');
 
 
 Route::middleware(['auth:api'])->group(function () {
-//Forget Password
-    Route::post('forgetLink',[UserController::class,'mailForgetLink'])->name('user.forget');
-    //Forget view
-    Route::put('forget/{user}',[UserController::class,'forget'])->name('password.update');
-});
-Route::get('forget/{user}',[UserController::class,'forget'])->name('forget');
+//Forget Password Link Generator
+    Route::post('forgetLink', [UserController::class, 'mailForgetLink'])->name('user.forget');
 
+});
+//Forget view
+Route::get('forget/{user}', [UserController::class, 'forget'])->name('forget');
+//Password Update
+Route::put('forget/{user}', [UserController::class, 'forget'])->name('password.update');
 
 //Fallback Routes
 Route::get('login', function () {

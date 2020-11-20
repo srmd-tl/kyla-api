@@ -4,8 +4,6 @@
     <list default="true" id="33912953-645b-4e76-81fe-725eb82a5aa4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/emails/forget.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/forget.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/newPassword.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/newPassword.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +157,7 @@
       <updated>1605809219661</updated>
       <workItem from="1605809220835" duration="5013000" />
       <workItem from="1605898449397" duration="426000" />
-      <workItem from="1605902615123" duration="3536000" />
+      <workItem from="1605902615123" duration="3648000" />
     </task>
     <task id="LOCAL-00001" summary="updated users migration">
       <created>1605809510249</created>
@@ -266,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605905004464</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update">
+      <created>1605906174677</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1605906174677</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,10 +296,10 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="478" y="51" width="404" height="636" key="#com.intellij.ide.util.MemberChooser/0.0.1366.736@0.0.1366.736" timestamp="1605811826058" />
-    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2" timestamp="1605905004181">
+    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2" timestamp="1605906174375">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1605905004181" />
+    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1605906174375" />
     <state x="172" y="2" width="1022" height="732" key="SettingsEditor" timestamp="1605812103112">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
@@ -303,10 +308,10 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1605904425719" />
-    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup" timestamp="1605905596781">
+    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup" timestamp="1605906248353">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup/0.0.1366.736@0.0.1366.736" timestamp="1605905596781" />
+    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup/0.0.1366.736@0.0.1366.736" timestamp="1605906248353" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
