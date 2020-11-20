@@ -61,7 +61,7 @@ class UserController extends Controller
 
     }
 
-    public function forgetLink()
+    public function mailForgetLink()
     {
         try {
             Mail::to(auth()->user()->email)->send(new ForgetPassword());
