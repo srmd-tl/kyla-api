@@ -31,4 +31,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 //Races
-Route::get('races',[\App\Http\Controllers\GenericController::class,'races']);
+Route::get('races', [\App\Http\Controllers\GenericController::class, 'races']);
+//Genders
+Route::get('genders', [\App\Http\Controllers\GenericController::class, 'genders']);
+//States
+Route::get('states', [\App\Http\Controllers\GenericController::class, 'states']);
