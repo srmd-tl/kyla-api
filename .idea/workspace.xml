@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33912953-645b-4e76-81fe-725eb82a5aa4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/race.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kyla-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kyla-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/gender.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605812917337</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="races api">
+      <created>1605901072532</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1605901072532</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,17 +218,18 @@
     <MESSAGE value="update" />
     <MESSAGE value="register user api" />
     <MESSAGE value="login api" />
-    <option name="LAST_COMMIT_MESSAGE" value="login api" />
+    <MESSAGE value="races api" />
+    <option name="LAST_COMMIT_MESSAGE" value="races api" />
   </component>
   <component name="WindowStateProjectService">
     <state x="478" y="51" width="404" height="636" key="#com.intellij.ide.util.MemberChooser" timestamp="1605811826058">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="478" y="51" width="404" height="636" key="#com.intellij.ide.util.MemberChooser/0.0.1366.736@0.0.1366.736" timestamp="1605811826058" />
-    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2" timestamp="1605812916839">
+    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2" timestamp="1605901071990">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1605812916839" />
+    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1605901071990" />
     <state x="172" y="2" width="1022" height="732" key="SettingsEditor" timestamp="1605812103112">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
@@ -235,9 +238,9 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1605812920857" />
-    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup" timestamp="1605814005622">
+    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup" timestamp="1605901307875">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup/0.0.1366.736@0.0.1366.736" timestamp="1605814005622" />
+    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup/0.0.1366.736@0.0.1366.736" timestamp="1605901307875" />
   </component>
 </project>
