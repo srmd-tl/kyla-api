@@ -22,8 +22,11 @@ Route::post('login', [UserController::class, 'login'])->name('user.login');
 
 Route::middleware(['auth:api'])->group(function () {
 //Forget Password
-    Route::post('forget',[UserController::class,'forget'])->name('user.forget');
+    Route::post('forgetLink',[UserController::class,'mailForgetLink'])->name('user.forget');
 });
+//Forget view
+Route::get('forget/{user}',[UserController::class,'forget'])->name('forget');
+Route::post('forget',[UserController::class,'forget']);
 
 //Fallback Routes
 Route::get('login', function () {

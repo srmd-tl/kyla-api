@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ForgetPassword;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -60,10 +61,26 @@ class UserController extends Controller
 
     }
 
-    public function forget()
+    public function forgetLink()
     {
-
+        try {
+            Mail::to(auth()->user()->email)->send(new ForgetPassword());
+        } catch (\Exception $exception) {
+            return response()->error($exception->getMessage());
+        }
+        return response()->success("Mail Link Sent In Email");
     }
 
+    public function forget(User $user)
+    {
+        if (request()->method() == "Get") {
+            if (!request()->hasValidSignature()) {
+                abort(401);
+            }
+            return view('newPassword');
+        }
+        $user->update(["password" => Hash::make(request()->password)]);
+        return "Password UPdated!";
+    }
 
 }
