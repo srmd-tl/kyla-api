@@ -16,12 +16,16 @@ use Illuminate\Support\Facades\Route;
 */
 //Register
 Route::post('register', [UserController::class, 'register'])->name('user.register');
-
-
 //Login
 Route::post('login', [UserController::class, 'login'])->name('user.login');
 
-//Login
+
+Route::middleware(['auth:api'])->group(function () {
+//Forget Password
+    Route::post('forget',[UserController::class,'forget'])->name('user.forget');
+});
+
+//Fallback Routes
 Route::get('login', function () {
     abort(403);
 })->name('login');
