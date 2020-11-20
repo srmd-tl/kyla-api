@@ -73,11 +73,11 @@ class UserController extends Controller
 
     public function forget(User $user)
     {
-        if (request()->method() == "Get") {
+        if (request()->method() == "GET") {
             if (!request()->hasValidSignature()) {
                 abort(401);
             }
-            return view('newPassword');
+            return view('newPassword',["id"=>$user->id]);
         }
         $user->update(["password" => Hash::make(request()->password)]);
         return "Password UPdated!";
