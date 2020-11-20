@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33912953-645b-4e76-81fe-725eb82a5aa4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +155,7 @@
       <updated>1605809219661</updated>
       <workItem from="1605809220835" duration="5013000" />
       <workItem from="1605898449397" duration="426000" />
-      <workItem from="1605902615123" duration="1759000" />
+      <workItem from="1605902615123" duration="1811000" />
     </task>
     <task id="LOCAL-00001" summary="updated users migration">
       <created>1605809510249</created>
@@ -243,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605903415375</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="forget password secure url generation and update password">
+      <created>1605904422705</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1605904422705</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,29 +265,30 @@
     <MESSAGE value="update" />
     <MESSAGE value="forget password" />
     <MESSAGE value="forget password view" />
-    <option name="LAST_COMMIT_MESSAGE" value="forget password view" />
+    <MESSAGE value="forget password secure url generation and update password" />
+    <option name="LAST_COMMIT_MESSAGE" value="forget password secure url generation and update password" />
   </component>
   <component name="WindowStateProjectService">
     <state x="478" y="51" width="404" height="636" key="#com.intellij.ide.util.MemberChooser" timestamp="1605811826058">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="478" y="51" width="404" height="636" key="#com.intellij.ide.util.MemberChooser/0.0.1366.736@0.0.1366.736" timestamp="1605811826058" />
-    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2" timestamp="1605903414977">
+    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2" timestamp="1605904422440">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1605903414977" />
+    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1605904422440" />
     <state x="172" y="2" width="1022" height="732" key="SettingsEditor" timestamp="1605812103112">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="172" y="2" width="1022" height="732" key="SettingsEditor/0.0.1366.736@0.0.1366.736" timestamp="1605812103112" />
-    <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2" timestamp="1605901778127">
+    <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2" timestamp="1605904425719">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1605901778127" />
-    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup" timestamp="1605903909872">
+    <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1605904425719" />
+    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup" timestamp="1605904434699">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup/0.0.1366.736@0.0.1366.736" timestamp="1605903909872" />
+    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup/0.0.1366.736@0.0.1366.736" timestamp="1605904434699" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
