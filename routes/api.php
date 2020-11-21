@@ -24,7 +24,7 @@ Route::middleware(['auth:api'])->group(function () {
 //Forget Password Link Generator
     Route::post('forgetLink', [UserController::class, 'mailForgetLink'])->name('user.forget');
     //Update User Profile
-    Route::put('updateProfile', [UserController::class, 'updateProfile'])->name('user.updateProfile');
+    Route::post('updateProfile', [UserController::class, 'updateProfile'])->name('user.updateProfile');
 
 });
 //Forget view

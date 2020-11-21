@@ -92,7 +92,7 @@ class UserController extends Controller
             "age" => request()->age ?? $user->age,
             "gender" => request()->gender ?? $user->gender,
             "state" => request()->state ?? $user->state,
-            "race" => request()->race ?? request()->race,
+            "race" => request()->race ?? $user->race,
         ];
         if (request()->password) {
             $data["password"] = Hash::make(request()->password);
@@ -102,7 +102,6 @@ class UserController extends Controller
             $data["photo"] = $path;
         }
         $user->update($data);
+        return response()->success("Profile Updated");
     }
-
-
 }
