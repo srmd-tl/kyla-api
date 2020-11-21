@@ -4,8 +4,6 @@
     <list default="true" id="33912953-645b-4e76-81fe-725eb82a5aa4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +160,7 @@
       <workItem from="1605809220835" duration="5013000" />
       <workItem from="1605898449397" duration="426000" />
       <workItem from="1605902615123" duration="3901000" />
-      <workItem from="1605921250188" duration="2752000" />
+      <workItem from="1605921250188" duration="2959000" />
     </task>
     <task id="LOCAL-00001" summary="updated users migration">
       <created>1605809510249</created>
@@ -297,7 +295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605948888526</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="update profile">
+      <created>1605949344153</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1605949344153</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,18 +328,18 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="478" y="51" width="404" height="636" key="#com.intellij.ide.util.MemberChooser/0.0.1366.736@0.0.1366.736" timestamp="1605811826058" />
-    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2" timestamp="1605948887907">
+    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2" timestamp="1605949344027">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1605948887907" />
+    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1605949344027" />
     <state x="172" y="2" width="1022" height="732" key="SettingsEditor" timestamp="1605812103112">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="172" y="2" width="1022" height="732" key="SettingsEditor/0.0.1366.736@0.0.1366.736" timestamp="1605812103112" />
-    <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2" timestamp="1605948899025">
+    <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2" timestamp="1605949346870">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1605948899025" />
+    <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1605949346870" />
     <state x="346" y="57" width="672" height="678" key="search.everywhere.popup" timestamp="1605948793624">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
