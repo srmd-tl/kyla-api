@@ -37,4 +37,8 @@ class User extends Authenticatable
         $url = sprintf(request()->getHttpHost() . "%s" . $value, "/storage/");
         return $url;
     }
+    public function contacts()
+    {
+        return $this->hasMany(Contact::class,'user_id');
+    }
 }

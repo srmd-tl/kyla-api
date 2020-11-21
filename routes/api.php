@@ -26,7 +26,14 @@ Route::middleware(['auth:api'])->group(function () {
     //Update User Profile
     Route::post('updateProfile', [UserController::class, 'updateProfile'])->name('user.updateProfile');
     //Get Profile
-    Route::get('profile',[UserController::class,'profile'])->name('user.profile');
+    Route::get('profile', [UserController::class, 'profile'])->name('user.profile');
+    //Get User Contacts
+    Route::get('user/contact', [\App\Http\Controllers\ContactController::class, 'get'])->name('user.contacts');
+    //Add Contact
+    Route::post('user/contact', [\App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
+//Update Contact
+    Route::put('user/contact/{contact}', [\App\Http\Controllers\ContactController::class, 'update'])->name('contact.update');
+
 });
 //Forget view
 Route::get('forget/{user}', [UserController::class, 'forget'])->name('forget');
