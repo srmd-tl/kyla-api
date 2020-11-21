@@ -77,10 +77,32 @@ class UserController extends Controller
             if (!request()->hasValidSignature()) {
                 abort(401);
             }
-            return view('newPassword',["id"=>$user->id]);
+            return view('newPassword', ["id" => $user->id]);
         }
-        $user->update(["password" => Hash::make(request()->password),"api_token"=>null]);
+        $user->update(["password" => Hash::make(request()->password), "api_token" => null]);
         return "Password UPdated!";
     }
+
+    public function updateProfile()
+    {
+        $user = auth()->user();
+        $data = [
+            "name" => request()->name ?? $user->name,
+            "email" => request()->email ?? $user->email,
+            "age" => request()->age ?? $user->age,
+            "gender" => request()->gender ?? $user->gender,
+            "state" => request()->state ?? $user->state,
+            "race" => request()->race ?? request()->race,
+        ];
+        if (request()->password) {
+            $data["password"] = Hash::make(request()->password);
+        }
+        if (request()->photo) {
+            $path = request()->file('photo')->store('avatars');
+            $data["photo"] = $path;
+        }
+        $user->update($data);
+    }
+
 
 }

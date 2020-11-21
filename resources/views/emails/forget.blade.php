@@ -1,3 +1,3 @@
 <div>
-    <a href="{{$url}}">Click Here To Set New Password</a>
+    You requested a password reset,to reset the password visit the following link {{$url}}
 </div>
