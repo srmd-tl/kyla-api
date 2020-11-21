@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="33912953-645b-4e76-81fe-725eb82a5aa4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +159,7 @@
       <workItem from="1605809220835" duration="5013000" />
       <workItem from="1605898449397" duration="426000" />
       <workItem from="1605902615123" duration="3901000" />
-      <workItem from="1605921250188" duration="3756000" />
+      <workItem from="1605921250188" duration="5023000" />
     </task>
     <task id="LOCAL-00001" summary="updated users migration">
       <created>1605809510249</created>
@@ -311,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605949576752</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="get profile">
+      <created>1605950352569</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1605950352569</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,29 +335,30 @@
     <MESSAGE value="update" />
     <MESSAGE value="update profile" />
     <MESSAGE value="update profile - disk update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update profile - disk update" />
+    <MESSAGE value="get profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="get profile" />
   </component>
   <component name="WindowStateProjectService">
     <state x="478" y="51" width="404" height="636" key="#com.intellij.ide.util.MemberChooser" timestamp="1605811826058">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="478" y="51" width="404" height="636" key="#com.intellij.ide.util.MemberChooser/0.0.1366.736@0.0.1366.736" timestamp="1605811826058" />
-    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2" timestamp="1605949576603">
+    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2" timestamp="1605950352352">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1605949576603" />
+    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1605950352352" />
     <state x="172" y="2" width="1022" height="732" key="SettingsEditor" timestamp="1605812103112">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="172" y="2" width="1022" height="732" key="SettingsEditor/0.0.1366.736@0.0.1366.736" timestamp="1605812103112" />
-    <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2" timestamp="1605949346870">
+    <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2" timestamp="1605950354852">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1605949346870" />
-    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup" timestamp="1605949669326">
+    <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1605950354852" />
+    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup" timestamp="1605950787442">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup/0.0.1366.736@0.0.1366.736" timestamp="1605949669326" />
+    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup/0.0.1366.736@0.0.1366.736" timestamp="1605950787442" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
