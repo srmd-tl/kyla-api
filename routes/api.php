@@ -25,7 +25,8 @@ Route::middleware(['auth:api'])->group(function () {
     Route::post('forgetLink', [UserController::class, 'mailForgetLink'])->name('user.forget');
     //Update User Profile
     Route::post('updateProfile', [UserController::class, 'updateProfile'])->name('user.updateProfile');
-
+    //Get Profile
+    Route::get('profile',[UserController::class,'profile'])->name('user.profile');
 });
 //Forget view
 Route::get('forget/{user}', [UserController::class, 'forget'])->name('forget');

@@ -98,10 +98,15 @@ class UserController extends Controller
             $data["password"] = Hash::make(request()->password);
         }
         if (request()->photo) {
-            $path = request()->file('photo')->store('avatars',"public");
+            $path = request()->file('photo')->store('avatars', "public");
             $data["photo"] = $path;
         }
         $user->update($data);
         return response()->success("Profile Updated");
+    }
+
+    public function profile()
+    {
+        return response()->success(request()->user());
     }
 }
