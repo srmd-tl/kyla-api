@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33912953-645b-4e76-81fe-725eb82a5aa4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Utils/Helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +161,8 @@
       <workItem from="1605809220835" duration="5013000" />
       <workItem from="1605898449397" duration="426000" />
       <workItem from="1605902615123" duration="3901000" />
-      <workItem from="1605921250188" duration="6557000" />
+      <workItem from="1605921250188" duration="7313000" />
+      <workItem from="1606040107075" duration="223000" />
     </task>
     <task id="LOCAL-00001" summary="updated users migration">
       <created>1605809510249</created>
@@ -357,6 +358,10 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1605951617149" />
+    <state x="363" y="93" width="681" height="552" key="NewPhpClassDialog" timestamp="1606040298490">
+      <screen x="0" y="0" width="1366" height="736" />
+    </state>
+    <state x="363" y="93" width="681" height="552" key="NewPhpClassDialog/0.0.1366.736@0.0.1366.736" timestamp="1606040298490" />
     <state x="172" y="2" width="1022" height="732" key="SettingsEditor" timestamp="1605812103112">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
