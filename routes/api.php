@@ -28,13 +28,19 @@ Route::middleware(['auth:api'])->group(function () {
     //Get Profile
     Route::get('profile', [UserController::class, 'profile'])->name('user.profile');
     //Get User Contacts
-    Route::get('user/contact', [\App\Http\Controllers\ContactController::class, 'get'])->name('user.contacts');
+    Route::get('user/contact', [\App\Http\Controllers\ContactController::class, 'get'])
+        ->name('user.contacts');
     //Add Contact
-    Route::post('user/contact', [\App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
+    Route::post('user/contact', [\App\Http\Controllers\ContactController::class, 'store'])
+        ->name('contact.store');
     //Update Contact
-    Route::put('user/contact/{contact}', [\App\Http\Controllers\ContactController::class, 'update'])->name('contact.update');
+    Route::put('user/contact/{contact}', [\App\Http\Controllers\ContactController::class, 'update'])
+        ->name('contact.update');
     //Logout
-    Route::post('logout',[UserController::class,'logout'])->name('user.logout');
+    Route::post('logout', [UserController::class, 'logout'])->name('user.logout');
+    //Store audio file
+    Route::post('kyla/process/audio', [\App\Http\Controllers\UserFileController::class, 'audioStore'])
+        ->name('audio.store');
 
 });
 //Forget view

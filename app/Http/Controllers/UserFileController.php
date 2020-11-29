@@ -7,6 +7,16 @@ use Illuminate\Http\Request;
 
 class UserFileController extends Controller
 {
+    public function audioStore()
+    {
+        request()->validate(["file"=>"required|mimes:mpga,wav,mp3"]);
+        //upload to google drive code
+        $path=null;
+        UserFile::insert(["path"=>$path,"type"=>UserFile::AUDIO]);
+        return response()->success("File Saved");
+
+    }
+
     /**
      * Display a listing of the resource.
      *
