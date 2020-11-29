@@ -47,6 +47,9 @@ Route::middleware(['auth:api'])->group(function () {
     //Store Video file
     Route::post('kyla/process/video',[\App\Http\Controllers\UserFileController::class,'videoStore'])
         ->name('video.store');
+    //Get Video files
+    Route::get('kyla/process/video',[\App\Http\Controllers\UserFileController::class,'videoFiles'])
+        ->name('video.get');
 
 });
 //Forget view

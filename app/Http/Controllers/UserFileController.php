@@ -28,5 +28,10 @@ class UserFileController extends Controller
         UserFile::insert(["path"=>$path,"type"=>UserFile::VIDEO,"user_id"=>auth()->user()->id]);
         return response()->json("Video Saved!");
     }
+    public function videoFiles()
+    {
+        return response()->json(auth()->user()->videoFiles);
+
+    }
 
 }

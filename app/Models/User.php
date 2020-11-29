@@ -45,4 +45,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(UserFile::class,'user_id')->where('type',UserFile::AUDIO);
     }
+    public function videoFiles()
+    {
+        return $this->hasMany(UserFile::class,'user_id')->where('type',UserFile::VIDEO);
+    }
 }
