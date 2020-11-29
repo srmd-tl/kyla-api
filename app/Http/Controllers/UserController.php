@@ -109,4 +109,11 @@ class UserController extends Controller
     {
         return response()->success(request()->user());
     }
+    public function logout()
+    {
+        auth()->user()->update(["api_token"=>null]);
+	auth()->user()->logout();
+	return response()->success("Logged Out!!");
+    }
 }
+

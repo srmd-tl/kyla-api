@@ -31,8 +31,10 @@ Route::middleware(['auth:api'])->group(function () {
     Route::get('user/contact', [\App\Http\Controllers\ContactController::class, 'get'])->name('user.contacts');
     //Add Contact
     Route::post('user/contact', [\App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
-//Update Contact
+    //Update Contact
     Route::put('user/contact/{contact}', [\App\Http\Controllers\ContactController::class, 'update'])->name('contact.update');
+    //Logout
+    Route::post('logout',[UserController::class,'logout'])->name('user.logout');
 
 });
 //Forget view
