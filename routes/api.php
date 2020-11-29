@@ -41,6 +41,12 @@ Route::middleware(['auth:api'])->group(function () {
     //Store audio file
     Route::post('kyla/process/audio', [\App\Http\Controllers\UserFileController::class, 'audioStore'])
         ->name('audio.store');
+    //Get audio files
+    Route::get('kyla/process/audio',[\App\Http\Controllers\UserFileController::class, 'audioFiles'])
+        ->name('audio.get');
+    //Store Video file
+    Route::post('kyla/process/video',[\App\Http\Controllers\UserFileController::class,'videoStore'])
+        ->name('video.store');
 
 });
 //Forget view

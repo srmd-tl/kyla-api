@@ -12,7 +12,7 @@ class UserFileController extends Controller
         request()->validate(["file"=>"required|mimes:mpga,wav,mp3"]);
         //upload to google drive code
         $path=null;
-        UserFile::insert(["path"=>$path,"type"=>UserFile::AUDIO]);
+        UserFile::insert(["path"=>$path,"type"=>UserFile::AUDIO,"user_id"=>auth()->user()->id]);
         return response()->success("File Saved");
 
     }
@@ -20,79 +20,13 @@ class UserFileController extends Controller
     {
         return response()->json(auth()->user()->audioFiles);
     }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function videoStore()
     {
-        //
+        request()->validate(["file"=>"required|mime:mp4"]);
+        //Code for google drive file upload
+        $path=null;
+        UserFile::insert(["path"=>$path,"type"=>UserFile::VIDEO,"user_id"=>auth()->user()->id]);
+        return response()->json("Video Saved!");
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\UserFile  $userFile
-     * @return \Illuminate\Http\Response
-     */
-    public function show(UserFile $userFile)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\UserFile  $userFile
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(UserFile $userFile)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\UserFile  $userFile
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, UserFile $userFile)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\UserFile  $userFile
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(UserFile $userFile)
-    {
-        //
-    }
 }
