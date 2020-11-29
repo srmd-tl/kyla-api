@@ -16,7 +16,10 @@ class UserFileController extends Controller
         return response()->success("File Saved");
 
     }
-
+    public function audioFiles()
+    {
+        return response()->json(auth()->user()->audioFiles);
+    }
     /**
      * Display a listing of the resource.
      *

@@ -41,4 +41,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Contact::class,'user_id');
     }
+    public function audioFiles()
+    {
+        return $this->hasMany(UserFile::class,'user_id')->where('type',UserFile::AUDIO);
+    }
 }
