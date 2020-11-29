@@ -51,6 +51,7 @@ Route::middleware(['auth:api'])->group(function () {
     Route::get('kyla/process/video',[\App\Http\Controllers\UserFileController::class,'videoFiles'])
         ->name('video.get');
 
+
 });
 //Forget view
 Route::get('forget/{user}', [UserController::class, 'forget'])->name('forget');
@@ -72,3 +73,5 @@ Route::get('races', [\App\Http\Controllers\GenericController::class, 'races']);
 Route::get('genders', [\App\Http\Controllers\GenericController::class, 'genders']);
 //States
 Route::get('states', [\App\Http\Controllers\GenericController::class, 'states']);
+//Laws
+Route::get('laws',[\App\Http\Controllers\GenericController::class,'laws'])->name('laws.get');

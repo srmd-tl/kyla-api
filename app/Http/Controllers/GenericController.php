@@ -30,5 +30,12 @@ class GenericController extends Controller
         return $states ? response()->success($states) : response()->error("Nothing Found!");
     }
 
+    public function laws()
+    {
+        $filePath = public_path().'laws.yml';
+        $laws = Yaml::parse(file_get_contents($filePath));
+        return $laws?response()->success($laws):response()->error("Nothing Found!");
+    }
+
 }
 
