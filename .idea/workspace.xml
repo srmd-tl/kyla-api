@@ -29,9 +29,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33912953-645b-4e76-81fe-725eb82a5aa4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/laws.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GenericController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GenericController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +197,7 @@
       <workItem from="1605902615123" duration="3901000" />
       <workItem from="1605921250188" duration="7313000" />
       <workItem from="1606040107075" duration="223000" />
-      <workItem from="1606666901078" duration="3546000" />
+      <workItem from="1606666901078" duration="4124000" />
     </task>
     <task id="LOCAL-00001" summary="updated users migration">
       <created>1605809510249</created>
@@ -421,20 +420,20 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="363" y="93" width="681" height="552" key="NewPhpClassDialog/0.0.1366.736@0.0.1366.736" timestamp="1606040298490" />
-    <state x="235" y="29" width="1022" height="732" key="SettingsEditor" timestamp="1606670111226">
+    <state x="235" y="29" width="1022" height="737" key="SettingsEditor" timestamp="1606672651260">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="172" y="2" width="1022" height="732" key="SettingsEditor/0.0.1366.736@0.0.1366.736" timestamp="1605812103112" />
-    <state x="235" y="29" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1606670111226" />
+    <state x="235" y="29" width="1022" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1606672651260" />
     <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2" timestamp="1605951634617">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1605951634617" />
-    <state x="400" y="84" width="672" height="683" key="search.everywhere.popup" timestamp="1606671224058">
+    <state x="400" y="84" width="672" height="683" key="search.everywhere.popup" timestamp="1606672625128">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="346" y="57" width="672" height="678" key="search.everywhere.popup/0.0.1366.736@0.0.1366.736" timestamp="1605953030581" />
-    <state x="400" y="84" width="672" height="683" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1606671224058" />
+    <state x="400" y="84" width="672" height="683" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1606672625128" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

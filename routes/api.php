@@ -42,14 +42,20 @@ Route::middleware(['auth:api'])->group(function () {
     Route::post('kyla/process/audio', [\App\Http\Controllers\UserFileController::class, 'audioStore'])
         ->name('audio.store');
     //Get audio files
-    Route::get('kyla/process/audio',[\App\Http\Controllers\UserFileController::class, 'audioFiles'])
+    Route::get('kyla/process/audio', [\App\Http\Controllers\UserFileController::class, 'audioFiles'])
         ->name('audio.get');
     //Store Video file
-    Route::post('kyla/process/video',[\App\Http\Controllers\UserFileController::class,'videoStore'])
+    Route::post('kyla/process/video', [\App\Http\Controllers\UserFileController::class, 'videoStore'])
         ->name('video.store');
     //Get Video files
-    Route::get('kyla/process/video',[\App\Http\Controllers\UserFileController::class,'videoFiles'])
+    Route::get('kyla/process/video', [\App\Http\Controllers\UserFileController::class, 'videoFiles'])
         ->name('video.get');
+    //Store Officer
+    Route::post('kyla/process/officer', [\App\Http\Controllers\OfficerController::class, 'officer'])
+        ->name('officer.store');
+    //Get Officer
+    Route::get('kyla/process/officer', [\App\Http\Controllers\OfficerController::class, 'getOfficer'])
+        ->name('officer.get');
 
 
 });
@@ -74,4 +80,4 @@ Route::get('genders', [\App\Http\Controllers\GenericController::class, 'genders'
 //States
 Route::get('states', [\App\Http\Controllers\GenericController::class, 'states']);
 //Laws
-Route::get('laws',[\App\Http\Controllers\GenericController::class,'laws'])->name('laws.get');
+Route::get('laws', [\App\Http\Controllers\GenericController::class, 'laws'])->name('laws.get');

@@ -49,4 +49,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(UserFile::class,'user_id')->where('type',UserFile::VIDEO);
     }
+    public function officer()
+    {
+        return $this->hasOne(Officer::class,'user_id');
+    }
 }
