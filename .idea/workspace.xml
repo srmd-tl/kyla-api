@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33912953-645b-4e76-81fe-725eb82a5aa4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Utils/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kyla-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kyla-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +129,7 @@
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/twilio/sdk" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kWH2Ien1CEFwVkpJOcrJNULjA5" />
@@ -140,8 +141,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -163,6 +170,7 @@
       <workItem from="1605902615123" duration="3901000" />
       <workItem from="1605921250188" duration="7313000" />
       <workItem from="1606040107075" duration="223000" />
+      <workItem from="1606666901078" duration="1618000" />
     </task>
     <task id="LOCAL-00001" summary="updated users migration">
       <created>1605809510249</created>
@@ -362,18 +370,20 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="363" y="93" width="681" height="552" key="NewPhpClassDialog/0.0.1366.736@0.0.1366.736" timestamp="1606040298490" />
-    <state x="172" y="2" width="1022" height="732" key="SettingsEditor" timestamp="1605812103112">
-      <screen x="0" y="0" width="1366" height="736" />
+    <state x="235" y="29" width="1022" height="732" key="SettingsEditor" timestamp="1606670111226">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="172" y="2" width="1022" height="732" key="SettingsEditor/0.0.1366.736@0.0.1366.736" timestamp="1605812103112" />
+    <state x="235" y="29" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1606670111226" />
     <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2" timestamp="1605951634617">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1605951634617" />
-    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup" timestamp="1605953030581">
-      <screen x="0" y="0" width="1366" height="736" />
+    <state x="400" y="84" width="672" height="683" key="search.everywhere.popup" timestamp="1606670117916">
+      <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="346" y="57" width="672" height="678" key="search.everywhere.popup/0.0.1366.736@0.0.1366.736" timestamp="1605953030581" />
+    <state x="400" y="84" width="672" height="683" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1606670117916" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
