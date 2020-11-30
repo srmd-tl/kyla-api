@@ -30,8 +30,7 @@
   <component name="ChangeListManager">
     <list default="true" id="33912953-645b-4e76-81fe-725eb82a5aa4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GenericController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GenericController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +196,8 @@
       <workItem from="1605902615123" duration="3901000" />
       <workItem from="1605921250188" duration="7313000" />
       <workItem from="1606040107075" duration="223000" />
-      <workItem from="1606666901078" duration="4124000" />
+      <workItem from="1606666901078" duration="4716000" />
+      <workItem from="1606756458074" duration="35000" />
     </task>
     <task id="LOCAL-00001" summary="updated users migration">
       <created>1605809510249</created>
@@ -388,6 +388,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated users migration" />

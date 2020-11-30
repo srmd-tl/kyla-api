@@ -32,7 +32,7 @@ class GenericController extends Controller
 
     public function laws()
     {
-        $filePath = public_path().'laws.yml';
+        $filePath = public_path().'/laws.yml';
         $laws = Yaml::parse(file_get_contents($filePath));
         return $laws?response()->success($laws):response()->error("Nothing Found!");
     }
