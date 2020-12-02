@@ -17,10 +17,10 @@ class CreateOfficersTable extends Migration
             $table->id();
             $table->string("name");
             $table->string("number");
-            $table->foreignId("user_id");
+            $table->foreignId("kyla_process_id");
             $table->timestamps();
             //Foreign Key
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('kyla_process_id')->references('id')->on('kyla_processes');
         });
     }
 

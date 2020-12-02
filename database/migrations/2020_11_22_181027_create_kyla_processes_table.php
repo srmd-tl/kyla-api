@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserFilesTable extends Migration
+class CreateKylaProcessesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,18 @@ class CreateUserFilesTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_files', function (Blueprint $table) {
+        Schema::create('kyla_processes', function (Blueprint $table) {
             $table->id();
-            $table->string("path");
-            $table->tinyInteger("type")->comment("1 for photo, 2 for video");
-            $table->foreignId("kyla_process_id");
+            $table->string("location")->nullable();
+            $table->boolean("alert_via_sms")->default(0);
+            $table->boolean("alert_via_email")->default(0);
+
+            $table->foreignId("user_id");
             $table->timestamps();
             //Foreign Keys
-            $table->foreign("kyla_process_id")
+            $table->foreign("user_id")
                 ->references("id")
-                ->on("kyla_processes")
+                ->on("users")
                 ->onDelete("cascade");
         });
     }
@@ -34,6 +36,6 @@ class CreateUserFilesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_files');
+        Schema::dropIfExists('kyla_processes');
     }
 }
