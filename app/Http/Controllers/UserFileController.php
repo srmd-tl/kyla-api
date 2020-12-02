@@ -111,5 +111,15 @@ class UserFileController extends Controller
 
     }
 
-
+    private function getFileFromGoogleDrive(string $fileId)
+    {
+        try {
+            $client = self::getClient();
+        } catch (Exception $e) {
+            dd($e);
+        }
+        $service = new Google_Service_Drive($client);
+        $file = $service->files->get($fileId);
+        return $file ? response()->success($file) : response()->error("File Not Found");
+    }
 }
