@@ -57,6 +57,10 @@ Route::middleware(['auth:api'])->group(function () {
     Route::get('kyla/process/officer', [\App\Http\Controllers\OfficerController::class, 'getOfficer'])
         ->name('officer.get');
 
+    //Get file from google drive
+    Route::get('drive/audio/{fileId}', [\App\Http\Controllers\UserFileController::class, 'getFileFromGoogleDrive'])
+        ->name('drive.get.file');
+
 
 });
 //Forget view
