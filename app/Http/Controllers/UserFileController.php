@@ -20,7 +20,7 @@ class UserFileController extends Controller
         $service = new Google_Service_Drive($client);
         // Now lets try and send the metadata as well using multipart!
         $file = new Google_Service_Drive_DriveFile();
-        $file->setName("Hello World!");
+        $file->setName(request()->file('file')->getClientOriginalName());
         $result2 = $service->files->create(
             $file,
             array(
@@ -30,7 +30,7 @@ class UserFileController extends Controller
             )
         );
         //
-        $path = null;
+        $path = $result2->getId();
         UserFile::insert(["path" => $path, "type" => UserFile::AUDIO, "user_id" => auth()->user()->id]);
         return response()->success("File Saved");
 
@@ -93,7 +93,7 @@ class UserFileController extends Controller
 
     public function audioFiles()
     {
-        return response()->json(auth()->user()->audioFiles);
+        return response()->success(auth()->user()->audioFiles);
     }
 
     public function videoStore()
@@ -107,7 +107,7 @@ class UserFileController extends Controller
 
     public function videoFiles()
     {
-        return response()->json(auth()->user()->videoFiles);
+        return response()->success(auth()->user()->videoFiles);
 
     }
 
