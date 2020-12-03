@@ -31,10 +31,7 @@
     <list default="true" id="33912953-645b-4e76-81fe-725eb82a5aa4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/KylaProcessController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/KylaProcessController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserFileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserFileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/KylaProcess.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KylaProcess.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Utils/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utils/Helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +207,7 @@
       <workItem from="1606756458074" duration="650000" />
       <workItem from="1606843983321" duration="6247000" />
       <workItem from="1606928110770" duration="4530000" />
-      <workItem from="1607012855141" duration="2794000" />
+      <workItem from="1607012855141" duration="2934000" />
     </task>
     <task id="LOCAL-00001" summary="updated users migration">
       <created>1605809510249</created>
@@ -455,11 +452,11 @@
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="383" y="174" key="run.anything.popup/72.27.1294.741@72.27.1294.741" timestamp="1607015702227" />
-    <state x="400" y="84" width="672" height="683" key="search.everywhere.popup" timestamp="1607014864355">
+    <state x="400" y="84" width="672" height="683" key="search.everywhere.popup" timestamp="1607015995409">
       <screen x="72" y="27" width="1294" height="741" />
     </state>
     <state x="346" y="57" width="672" height="678" key="search.everywhere.popup/0.0.1366.736@0.0.1366.736" timestamp="1605953030581" />
-    <state x="400" y="84" width="672" height="683" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1607014864355" />
+    <state x="400" y="84" width="672" height="683" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1607015995409" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -43,4 +43,8 @@ class KylaProcessController extends Controller
         return response()->success("Info saved");
     }
 
+    public function show(KylaProcess $kylaProcess)
+    {
+        return response()->success($kylaProcess);
+    }
 }
