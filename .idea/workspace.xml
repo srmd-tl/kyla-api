@@ -29,10 +29,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33912953-645b-4e76-81fe-725eb82a5aa4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/kylaProcess/report.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/KylaProcessController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/KylaProcessController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/KylaProcess.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/KylaProcess.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Utils/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utils/Helper.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/token.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/token.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +52,7 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
@@ -209,6 +212,7 @@
       <workItem from="1606843983321" duration="6247000" />
       <workItem from="1606928110770" duration="4530000" />
       <workItem from="1607012855141" duration="3530000" />
+      <workItem from="1607019740125" duration="1112000" />
     </task>
     <task id="LOCAL-00001" summary="updated users migration">
       <created>1605809510249</created>
@@ -418,46 +422,6 @@
     <MESSAGE value="get profile" />
     <MESSAGE value="contact" />
     <option name="LAST_COMMIT_MESSAGE" value="contact" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="478" y="51" width="404" height="636" key="#com.intellij.ide.util.MemberChooser" timestamp="1605811826058">
-      <screen x="0" y="0" width="1366" height="736" />
-    </state>
-    <state x="478" y="51" width="404" height="636" key="#com.intellij.ide.util.MemberChooser/0.0.1366.736@0.0.1366.736" timestamp="1605811826058" />
-    <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607015134303">
-      <screen x="72" y="27" width="1294" height="741" />
-    </state>
-    <state x="452" y="155" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1294.741@72.27.1294.741" timestamp="1607015134303" />
-    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2" timestamp="1605951617149">
-      <screen x="0" y="0" width="1366" height="736" />
-    </state>
-    <state x="172" y="0" width="1015" height="736" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1605951617149" />
-    <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1606849140774">
-      <screen x="72" y="27" width="1294" height="741" />
-    </state>
-    <state x="502" y="155" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1606849140774" />
-    <state x="363" y="93" width="681" height="552" key="NewPhpClassDialog" timestamp="1606040298490">
-      <screen x="0" y="0" width="1366" height="736" />
-    </state>
-    <state x="363" y="93" width="681" height="552" key="NewPhpClassDialog/0.0.1366.736@0.0.1366.736" timestamp="1606040298490" />
-    <state x="235" y="29" width="1022" height="737" key="SettingsEditor" timestamp="1606672651260">
-      <screen x="72" y="27" width="1294" height="741" />
-    </state>
-    <state x="172" y="2" width="1022" height="732" key="SettingsEditor/0.0.1366.736@0.0.1366.736" timestamp="1605812103112" />
-    <state x="235" y="29" width="1022" height="737" key="SettingsEditor/72.27.1294.741@72.27.1294.741" timestamp="1606672651260" />
-    <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2" timestamp="1605951634617">
-      <screen x="0" y="0" width="1366" height="736" />
-    </state>
-    <state x="278" y="104" width="804" height="530" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1605951634617" />
-    <state x="383" y="174" key="run.anything.popup" timestamp="1607016328635">
-      <screen x="72" y="27" width="1294" height="741" />
-    </state>
-    <state x="383" y="174" key="run.anything.popup/72.27.1294.741@72.27.1294.741" timestamp="1607016328635" />
-    <state x="400" y="84" width="672" height="683" key="search.everywhere.popup" timestamp="1607015995409">
-      <screen x="72" y="27" width="1294" height="741" />
-    </state>
-    <state x="346" y="57" width="672" height="678" key="search.everywhere.popup/0.0.1366.736@0.0.1366.736" timestamp="1605953030581" />
-    <state x="400" y="84" width="672" height="683" key="search.everywhere.popup/72.27.1294.741@72.27.1294.741" timestamp="1607015995409" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -8,18 +8,34 @@ use Google\Exception;
 use Google_Client;
 use Google_Service_Drive;
 use Google_Service_Drive_DriveFile;
+use Twilio\Exceptions\ConfigurationException;
+use Twilio\Exceptions\TwilioException;
+use Twilio\Rest\Api\V2010\Account\MessageInstance;
+use Twilio\Rest\Client;
 
 class Helper
 {
 
-    public static function sendMessage($message, $recipients)
+    /**
+     * @param string $message
+     * @param $recipients
+     * @throws ConfigurationException
+     * @throws TwilioException
+     */
+    public static function sendMessage(string $message, $recipients)
     {
-        $account_sid = getenv("TWILIO_SID");
-        $auth_token = getenv("TWILIO_AUTH_TOKEN");
-        $twilio_number = getenv("TWILIO_NUMBER");
-        $client = new Client($account_sid, $auth_token);
-        $client->messages->create($recipients,
-            ['from' => $twilio_number, 'body' => $message]);
+        $account_sid = env("TWILIO_SID");
+        $auth_token = env("TWILIO_AUTH_TOKEN");
+        $twilio_number = env("TWILIO_NUMBER");
+        $client = new Client(
+            $account_sid, $auth_token);
+        try {
+             $client->messages->create($recipients,
+                ['from' => $twilio_number, 'body' => $message]);
+        } catch (TwilioException $e) {
+            throw new TwilioException($e->getMessage()
+            );
+        }
     }
 
     public static function storeOnGdrive($file, string $fileName): string
@@ -99,3 +115,4 @@ class Helper
     }
 
 }
+
