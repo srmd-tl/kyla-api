@@ -5,6 +5,9 @@ namespace App\Utils;
 
 
 use Google\Exception;
+use Google_Client;
+use Google_Service_Drive;
+use Google_Service_Drive_DriveFile;
 
 class Helper
 {
@@ -19,16 +22,16 @@ class Helper
             ['from' => $twilio_number, 'body' => $message]);
     }
 
-    public static function storeOnGdrive($file,string $fileName): string
+    public static function storeOnGdrive($file, string $fileName): string
     {
         // Get the API client and construct the service object.
         $client = self::getClient();
         $service = new Google_Service_Drive($client);
         // Now lets try and send the metadata as well using multipart!
-        $file = new Google_Service_Drive_DriveFile();
-        $file->setName($fileName);
+        $gFile = new Google_Service_Drive_DriveFile();
+        $gFile->setName($fileName);
         $result2 = $service->files->create(
-            $file,
+            $gFile,
             array(
                 'data' => file_get_contents($file),
                 'mimeType' => 'application/octet-stream',
@@ -40,7 +43,7 @@ class Helper
         return $path;
     }
 
-    private function getClient(): Google_Client
+    private static function getClient(): Google_Client
     {
         $client = new Google_Client();
         $client->setApplicationName('Google Drive API PHP Quickstart');

@@ -13,7 +13,7 @@ class KylaProcessController extends Controller
         $videoPath = null;
         request()->validate([
             "audioFile" => "required|mimes:mpga,wav,mp3",
-            "videoFile" => "required|mimes:mp4",
+//            "videoFile" => "required|mimes:mp4",
             "officerName" => "required",
             "officerNumber" => "required",
             "location" => "required",
@@ -32,7 +32,7 @@ class KylaProcessController extends Controller
         }
 
 
-        KylaProcess::insert([
+        KylaProcess::create([
             "audio_path" => $audioPath,
             "video_path" => $videoPath,
             "officer_name" => request()->officerName,
