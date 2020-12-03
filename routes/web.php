@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    \App\Utils\Helper::sendMessage("ello","+923315743763");
     return view('welcome');
 });
-Route::get('/test',[\App\Http\Controllers\UserFileController::class,'audioStore']);
+Route::get('/kylaProcess/{kylaProcess}', [\App\Http\Controllers\KylaProcessController::class, 'show'])
+    ->name('kylaProcess.show');
