@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SendReport;
 use App\Models\KylaProcess;
 use App\Utils\Helper;
+use Exception;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Request;
 use Twilio\Exceptions\ConfigurationException;
 use Twilio\Exceptions\TwilioException;
@@ -34,7 +37,6 @@ class KylaProcessController extends Controller
                 ->file("videoFile")->getClientOriginalName());
         }
 
-
         $kylaProcess = KylaProcess::create([
             "audio_path" => $audioPath,
             "video_path" => $videoPath,
@@ -50,32 +52,37 @@ class KylaProcessController extends Controller
         //Send Report
         try {
             self::sendReport($kylaProcess);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             return response()->error($e->getMessage());
         }
         return response()->success("Info saved");
     }
 
-    private
-    function sendReport(KylaProcess $kylaProcess)
+    private function sendReport(KylaProcess $kylaProcess)
     {
         if ($kylaProcess->alert_via_sms) {
             try {
                 Helper::sendMessage("127.0.0.1:8000/kylaProcess/1", "+923315743763");
             } catch (ConfigurationException $e) {
-                throw new \Exception($e->getMessage());
+                throw new Exception($e->getMessage());
 
             } catch (TwilioException $e) {
-                throw new \Exception($e->getMessage());
+                throw new Exception($e->getMessage());
             }
 
+        }
+        if ($kylaProcess->alert_via_email) {
+            try {
+                Mail::to(auth()->user()->email)->send(new SendReport($kylaProcess));
+            } catch (\Exception $exception) {
+                return response()->error($exception->getMessage());
+            }
         }
 //        $kylaProcess->alert_via_email ? Helper::sendMessage() : false;
 
     }
 
-    public
-    function show(KylaProcess $kylaProcess)
+    public function show(KylaProcess $kylaProcess)
     {
         if (Request::wantsJson()) {
             return response()->success($kylaProcess);
