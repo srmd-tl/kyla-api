@@ -15,9 +15,14 @@ class CreateKylaProcessesTable extends Migration
     {
         Schema::create('kyla_processes', function (Blueprint $table) {
             $table->id();
+            $table->string("audio_path");
+            $table->string("video_path")->nullable();
+            $table->string("officer_name");
+            $table->string("officer_number");
             $table->string("location")->nullable();
-            $table->boolean("alert_via_sms")->default(0);
-            $table->boolean("alert_via_email")->default(0);
+            $table->string("law");
+            $table->boolean("alert_via_sms")->default(0)->comment("0 for NO, 1 for YES");
+            $table->boolean("alert_via_email")->default(0)->comment("0 for NO, 1 for YES");
 
             $table->foreignId("user_id");
             $table->timestamps();
