@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\UserFile;
+use App\Utils\Helper;
 use Google\Exception;
 use Google_Client;
 use Google_Service_Drive;
-use Google_Service_Drive_DriveFile;
 
 class UserFileController extends Controller
 {
@@ -15,25 +15,43 @@ class UserFileController extends Controller
 //        request()->validate(["file" => "required|mimes:mpga,wav,mp3"]);
         //upload to google drive code
 
-        // Get the API client and construct the service object.
-        $client = self::getClient();
-        $service = new Google_Service_Drive($client);
-        // Now lets try and send the metadata as well using multipart!
-        $file = new Google_Service_Drive_DriveFile();
-        $file->setName(request()->file('file')->getClientOriginalName());
-        $result2 = $service->files->create(
-            $file,
-            array(
-                'data' => file_get_contents(request()->file),
-                'mimeType' => 'application/octet-stream',
-                'uploadType' => 'multipart'
-            )
-        );
-        //
-        $path = $result2->getId();
+        $path = Helper::storeOnGdrive();
         UserFile::insert(["path" => $path, "type" => UserFile::AUDIO, "user_id" => auth()->user()->id]);
         return response()->success("File Saved");
 
+    }
+
+    public function audioFiles()
+    {
+        return response()->success(auth()->user()->audioFiles);
+    }
+
+    public function videoStore()
+    {
+        request()->validate(["file" => "required|mime:mp4"]);
+        //Code for google drive file upload
+        $path = null;
+        UserFile::insert(["path" => $path, "type" => UserFile::VIDEO, "user_id" => auth()->user()->id]);
+        return response()->json("Video Saved!");
+    }
+
+    public function videoFiles()
+    {
+        return response()->success(auth()->user()->videoFiles);
+
+    }
+
+    public function getFileFromGoogleDrive(string $fileId)
+    {
+        try {
+            $client = self::getClient();
+        } catch (Exception $e) {
+            dd($e);
+        }
+        $service = new Google_Service_Drive($client);
+//        $file = $service->files->get($fileId);
+        $file = $service->files->export($fileId, "mp3",);
+        return $file ? response()->success($file) : response()->error("File Not Found");
     }
 
     private function getClient()
@@ -89,38 +107,5 @@ class UserFileController extends Controller
             file_put_contents($tokenPath, json_encode($client->getAccessToken()));
         }
         return $client;
-    }
-
-    public function audioFiles()
-    {
-        return response()->success(auth()->user()->audioFiles);
-    }
-
-    public function videoStore()
-    {
-        request()->validate(["file" => "required|mime:mp4"]);
-        //Code for google drive file upload
-        $path = null;
-        UserFile::insert(["path" => $path, "type" => UserFile::VIDEO, "user_id" => auth()->user()->id]);
-        return response()->json("Video Saved!");
-    }
-
-    public function videoFiles()
-    {
-        return response()->success(auth()->user()->videoFiles);
-
-    }
-
-    public function getFileFromGoogleDrive(string $fileId)
-    {
-        try {
-            $client = self::getClient();
-        } catch (Exception $e) {
-            dd($e);
-        }
-        $service = new Google_Service_Drive($client);
-//        $file = $service->files->get($fileId);
-        $file = $service->files->export($fileId,"mp3",);
-        return $file ? response()->success($file) : response()->error("File Not Found");
     }
 }

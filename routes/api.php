@@ -38,28 +38,34 @@ Route::middleware(['auth:api'])->group(function () {
         ->name('contact.update');
     //Logout
     Route::post('logout', [UserController::class, 'logout'])->name('user.logout');
-    //Store audio file
-    Route::post('kyla/process/audio', [\App\Http\Controllers\UserFileController::class, 'audioStore'])
-        ->name('audio.store');
-    //Get audio files
-    Route::get('kyla/process/audio', [\App\Http\Controllers\UserFileController::class, 'audioFiles'])
-        ->name('audio.get');
-    //Store Video file
-    Route::post('kyla/process/video', [\App\Http\Controllers\UserFileController::class, 'videoStore'])
-        ->name('video.store');
-    //Get Video files
-    Route::get('kyla/process/video', [\App\Http\Controllers\UserFileController::class, 'videoFiles'])
-        ->name('video.get');
-    //Store Officer
-    Route::post('kyla/process/officer', [\App\Http\Controllers\OfficerController::class, 'officer'])
-        ->name('officer.store');
-    //Get Officer
-    Route::get('kyla/process/officer', [\App\Http\Controllers\OfficerController::class, 'getOfficer'])
-        ->name('officer.get');
 
-    //Get file from google drive
-    Route::get('drive/audio/{fileId}', [\App\Http\Controllers\UserFileController::class, 'getFileFromGoogleDrive'])
-        ->name('drive.get.file');
+    //Kyla process store
+    Route::post('kylaProcess',[\App\Http\Controllers\KylaProcessController::class,'store'])
+        ->name('kylaProcess.store');
+    Route::get('kylaProcess/{kylaProcess}',[\App\Http\Controllers\KylaProcessController::class,'show'])
+        ->name('kylaProcess.show');
+//    //Store audio file
+//    Route::post('kyla/process/audio', [\App\Http\Controllers\UserFileController::class, 'audioStore'])
+//        ->name('audio.store');
+//    //Get audio files
+//    Route::get('kyla/process/audio', [\App\Http\Controllers\UserFileController::class, 'audioFiles'])
+//        ->name('audio.get');
+//    //Store Video file
+//    Route::post('kyla/process/video', [\App\Http\Controllers\UserFileController::class, 'videoStore'])
+//        ->name('video.store');
+//    //Get Video files
+//    Route::get('kyla/process/video', [\App\Http\Controllers\UserFileController::class, 'videoFiles'])
+//        ->name('video.get');
+//    //Store Officer
+//    Route::post('kyla/process/officer', [\App\Http\Controllers\OfficerController::class, 'officer'])
+//        ->name('officer.store');
+//    //Get Officer
+//    Route::get('kyla/process/officer', [\App\Http\Controllers\OfficerController::class, 'getOfficer'])
+//        ->name('officer.get');
+//
+//    //Get file from google drive
+//    Route::get('drive/audio/{fileId}', [\App\Http\Controllers\UserFileController::class, 'getFileFromGoogleDrive'])
+//        ->name('drive.get.file');
 
 
 });
