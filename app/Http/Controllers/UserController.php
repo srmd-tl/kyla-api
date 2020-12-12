@@ -40,7 +40,7 @@ class UserController extends Controller
             ];
 
         if (request()->photo) {
-            $path = request()->file('avatar')->store("avatars", "public");
+            $path = request()->file('photo')->store("avatars", "public");
             $data["photo"] = $path;
         }
         $user = User::create($data);
