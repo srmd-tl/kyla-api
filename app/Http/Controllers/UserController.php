@@ -4,11 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Mail\ForgetPassword;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Mail;
 use Illuminate\Support\Str;
+use Mail;
 
 class UserController extends Controller
 {
@@ -39,6 +38,11 @@ class UserController extends Controller
                 "state" => request()->state,
                 "password" => Hash::make(request()->password)
             ];
+
+        if (request()->photo) {
+            $path = request()->file('avatar')->store("avatars", "public");
+            $data["photo"] = $path;
+        }
         $user = User::create($data);
         return response()->success($user);
     }
@@ -109,11 +113,12 @@ class UserController extends Controller
     {
         return response()->success(request()->user());
     }
+
     public function logout()
     {
-        auth()->user()->update(["api_token"=>null]);
-	auth()->user()->logout();
-	return response()->success("Logged Out!!");
+        auth()->user()->update(["api_token" => null]);
+        auth()->user()->logout();
+        return response()->success("Logged Out!!");
     }
 }
 
