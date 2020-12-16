@@ -62,7 +62,8 @@ class KylaProcessController extends Controller
     {
         if ($kylaProcess->alert_via_sms) {
             try {
-                Helper::sendMessage("127.0.0.1:8000/kylaProcess/1", "+923315743763");
+                $url = sprintf("%s/kylaProcess/%s", env('APP_URL'), $kylaProcess->id);
+                Helper::sendMessage($url, env("SEND_SMS_TO"));
             } catch (ConfigurationException $e) {
                 throw new Exception($e->getMessage());
 
