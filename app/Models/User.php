@@ -53,4 +53,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(Officer::class,'user_id');
     }
+    public function kylaProcesses()
+    {
+        return $this->hasMany(KylaProcess::class);
+    }
 }

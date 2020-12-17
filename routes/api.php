@@ -40,10 +40,12 @@ Route::middleware(['auth:api'])->group(function () {
     Route::post('logout', [UserController::class, 'logout'])->name('user.logout');
 
     //Kyla process store
-    Route::post('kylaProcess',[\App\Http\Controllers\KylaProcessController::class,'store'])
+    Route::post('kylaProcess', [\App\Http\Controllers\KylaProcessController::class, 'store'])
         ->name('kylaProcess.store');
-    Route::get('kylaProcess/{kylaProcess}',[\App\Http\Controllers\KylaProcessController::class,'show'])
+    Route::get('kylaProcess/{kylaProcess}', [\App\Http\Controllers\KylaProcessController::class, 'show'])
         ->name('kylaProcess.show');
+    Route::get('kylaProcess', [\App\Http\Controllers\KylaProcessController::class, 'index'])
+        ->name('kylaProcess.index');
 //    //Store audio file
 //    Route::post('kyla/process/audio', [\App\Http\Controllers\UserFileController::class, 'audioStore'])
 //        ->name('audio.store');

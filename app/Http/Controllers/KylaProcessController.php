@@ -91,5 +91,8 @@ class KylaProcessController extends Controller
             return view('kylaProcess.report', ["kylaProcess" => $kylaProcess]);
         }
     }
-
+    public function index()
+    {
+        return response()->success(auth()->user()->kylaProcesses);
+    }
 }
