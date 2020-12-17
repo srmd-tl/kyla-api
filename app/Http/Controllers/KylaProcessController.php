@@ -18,8 +18,8 @@ class KylaProcessController extends Controller
         $audioPath = null;
         $videoPath = null;
         request()->validate([
-            "audioFile" => "required|mimes:mpga,wav,mp3",
-//            "videoFile" => "required|mimes:mp4",
+            "audioFile" => "required|mimes:3gp",
+            "videoFile" => "mimes:mp4,",
             "officerName" => "required",
             "officerNumber" => "required",
             "location" => "required",
