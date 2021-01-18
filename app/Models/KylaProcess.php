@@ -19,13 +19,14 @@ class KylaProcess extends Model
 
     public function getAudioPathAttribute($value)
     {
-        $path = sprintf("https://drive.google.com/uc?export=download&id=%s", $value);
+
+        $path = sprintf("https://drive.google.com/file/d/%s/preview", $value);
         return $this->value = $path;
     }
 
     public function getVideoPathAttribute($value)
     {
-        $path = sprintf("https://drive.google.com/uc?export=download&id=%s", $value);
+        $path = sprintf("https://drive.google.com/file/d/%s/preview", $value);
         return $this->value = $path;
     }
 
