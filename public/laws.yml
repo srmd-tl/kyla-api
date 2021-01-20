@@ -1,12 +1,18 @@
 laws:
-  - Accident
-  - Illegal Substance
-  - Traffic Laws
-  - Property Laws
-  - DUI
-  - Speeding
-  - Stop & Frisk
-  - Phone Usage/Distracted Driving
-  - Child Custody Law
-  - Concealed to Carry/Gun Control Law
+  - name : Accident
+    url : https://statelaws.findlaw.com/wyoming-law/wyoming-accident-and-injury-laws.html
+  - name : Illegal Substance
+    url : https://statelaws.findlaw.com/wyoming-law/wyoming-marijuana-laws.html
+  - name : Traffic Laws
+    url : https://law.justia.com/codes/wyoming/2013/title-31/chapter-5/article-2/section-31-5-210/
+  - name: Property Laws
+  - name: DUI
+  - name: Speeding
+  - name: Stop & Frisk
+  - name: Phone Usage/Distracted Driving
+    url: https://www.drivinglaws.org/resources/wyoming-text-cell-phone-laws.html
+  - name: Child Custody Law
+    url: https://statelaws.findlaw.com/wyoming-law/wyoming-child-custody-laws.html
+  - name: Concealed to Carry/Gun Control Law
+    url: https://www.gunstocarry.com/gun-laws-state/wyoming-gun-laws/
   - Country By Country
