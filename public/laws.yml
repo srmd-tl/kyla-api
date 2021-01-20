@@ -7,12 +7,17 @@ laws:
     url : https://law.justia.com/codes/wyoming/2013/title-31/chapter-5/article-2/section-31-5-210/
   - name: Property Laws
   - name: DUI
+    url :
   - name: Speeding
+    url :
   - name: Stop & Frisk
+    url :
   - name: Phone Usage/Distracted Driving
     url: https://www.drivinglaws.org/resources/wyoming-text-cell-phone-laws.html
   - name: Child Custody Law
     url: https://statelaws.findlaw.com/wyoming-law/wyoming-child-custody-laws.html
   - name: Concealed to Carry/Gun Control Law
     url: https://www.gunstocarry.com/gun-laws-state/wyoming-gun-laws/
-  - Country By Country
+  - name: Country By Country
+    url :
+
