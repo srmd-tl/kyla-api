@@ -56,6 +56,13 @@ class Helper
         );
         //
         $path = $result2->getId();
+        //set permission to pulbic
+        $permission = new \Google_Service_Drive_Permission();
+        $permission->setRole('reader');
+        $permission->setType('anyone');
+        $permission->setAllowFileDiscovery(false);
+        $permissions = $service->permissions->create($path, $permission);
+
         return $path;
     }
 
