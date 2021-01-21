@@ -56,7 +56,6 @@ class Helper
         );
         //
         $publicPermission = new \Google_Service_Drive_Permission();
-        $publicPermission->setValue(null);
         $publicPermission->setType('anyone');
         $publicPermission->setRole('reader');
         $path = $result2->getId();
