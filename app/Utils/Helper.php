@@ -55,12 +55,7 @@ class Helper
             )
         );
         //
-        $publicPermission = new \Google_Service_Drive_Permission();
-        $publicPermission->setType('anyone');
-        $publicPermission->setRole('writer');
         $path = $result2->getId();
-        $service->permissions->update($path,17824296090636571822,$publicPermission);
-
         return $path;
     }
 
