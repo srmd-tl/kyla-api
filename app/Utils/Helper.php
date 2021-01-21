@@ -59,7 +59,7 @@ class Helper
         $publicPermission->setType('anyone');
         $publicPermission->setRole('reader');
         $path = $result2->getId();
-        $service->permissions->update($path,$publicPermission,null);
+        $service->permissions->update($path,17824296090636571822,$publicPermission);
 
         return $path;
     }
