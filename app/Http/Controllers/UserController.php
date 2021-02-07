@@ -67,8 +67,14 @@ class UserController extends Controller
 
     public function mailForgetLink()
     {
+        request()->validate(["email" => "required"]);
+        $user = User::whereEmail(request()->email)->first();
+        if (!$user) {
+            return response()->error("Record does not exist");
+        }
+
         try {
-            Mail::to(auth()->user()->email)->send(new ForgetPassword());
+            Mail::to(request()->email)->send(new ForgetPassword($user->id));
         } catch (\Exception $exception) {
             return response()->error($exception->getMessage());
         }

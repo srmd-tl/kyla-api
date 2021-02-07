@@ -19,3 +19,10 @@ Route::get('/', function () {
 });
 Route::get('/kylaProcess/{kylaProcess}', [\App\Http\Controllers\KylaProcessController::class, 'show'])
     ->name('kylaProcess.show');
+Route::get('stream/{folderName}/{filename}',function($folder,$filename){
+    $path = sprintf("/storage/%s/%s",$folder, $filename);
+    return response()->file(public_path($path),[
+        'Content-Type' => 'video/3gpp',
+        'Content-Disposition' => 'inline;'
+    ]);
+});
