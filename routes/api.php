@@ -21,9 +21,7 @@ Route::post('login', [UserController::class, 'login'])->name('user.login');
 
 
 Route::middleware(['auth:api'])->group(function () {
-//Forget Password Link Generator
-    Route::post('forgetLink', [UserController::class, 'mailForgetLink'])->name('user.forget');
-    //Update User Profile
+   //Update User Profile
     Route::post('updateProfile', [UserController::class, 'updateProfile'])->name('user.updateProfile');
     //Get Profile
     Route::get('profile', [UserController::class, 'profile'])->name('user.profile');
@@ -75,6 +73,8 @@ Route::middleware(['auth:api'])->group(function () {
 Route::get('forget/{user}', [UserController::class, 'forget'])->name('forget');
 //Password Update
 Route::put('forget/{user}', [UserController::class, 'forget'])->name('password.update');
+//Forget Password Link Generator
+Route::post('forgetLink', [UserController::class, 'mailForgetLink'])->name('user.forget');
 
 //Fallback Routes
 Route::get('login', function () {
