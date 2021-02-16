@@ -27,9 +27,9 @@ class KylaProcessController extends Controller
         ]);
         //upload to google drive and audio file id
         if (request()->audioFile) {
-//            $audioPath = Helper::storeOnGdrive(request()->audioFile, request()
-//                ->file("audioFile")->getClientOriginalName());
-            $audioPath = request()->file("audioFile")->store("files");
+            $audioPath = Helper::storeOnGdrive(request()->audioFile, request()
+                ->file("audioFile")->getClientOriginalName());
+//            $audioPath = request()->file("audioFile")->store("files");
         }
         if (request()->videoFile) {
 
