@@ -36,7 +36,7 @@ class KylaProcessController extends Controller
             //upload to google drive and video file id
 //            $videoPath = Helper::storeOnGdrive(request()->audioFile, request()
 //                ->file("videoFile")->getClientOriginalName());
-            $audioPath = request()->file("videoFile")->store("files");
+            $videoPath = request()->file("videoFile")->store("files");
 
         }
 
