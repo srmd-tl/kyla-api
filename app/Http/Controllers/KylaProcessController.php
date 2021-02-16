@@ -29,14 +29,14 @@ class KylaProcessController extends Controller
         if (request()->audioFile) {
 //            $audioPath = Helper::storeOnGdrive(request()->audioFile, request()
 //                ->file("audioFile")->getClientOriginalName());
-            $audioPath= request()->file("audioFile")->store("files");
+            $audioPath = request()->file("audioFile")->store("files");
         }
         if (request()->videoFile) {
 
             //upload to google drive and video file id
 //            $videoPath = Helper::storeOnGdrive(request()->audioFile, request()
 //                ->file("videoFile")->getClientOriginalName());
-            $audioPath= request()->file("videoFile")->store("files");
+            $audioPath = request()->file("videoFile")->store("files");
 
         }
 
@@ -53,11 +53,14 @@ class KylaProcessController extends Controller
         ]);
 
         //Send Report
-        try {
-            self::sendReport($kylaProcess);
-        } catch (Exception $e) {
-            return response()->error($e->getMessage());
+        if (request()->viaSms > 0) {
+            try {
+                self::sendReport($kylaProcess);
+            } catch (Exception $e) {
+                return response()->error($e->getMessage());
+            }
         }
+
         return response()->success("Info saved");
     }
 
@@ -94,6 +97,7 @@ class KylaProcessController extends Controller
             return view('kylaProcess.report', ["kylaProcess" => $kylaProcess]);
         }
     }
+
     public function index()
     {
         return response()->success(auth()->user()->kylaProcesses);
