@@ -19,17 +19,19 @@ class KylaProcess extends Model
 
     public function getAudioPathAttribute($value)
     {
-        return $value;
-
-        $path = sprintf("%s/storage/%s", env("APP_URL"), $value);
-        return $this->value = asset($path);
+        if ($value) {
+            $path = sprintf("%s/storage/%s", env("APP_URL"), $value);
+            return $this->value = asset($path);
+        }
     }
 
     public function getVideoPathAttribute($value)
     {
-        return $value;
-        $path = sprintf("%s/storage/%s", env("APP_URL"), $value);
-        return $this->value = asset($path);
+        if ($value) {
+            $path = sprintf("%s/storage/%s", env("APP_URL"), $value);
+            return $this->value = asset($path);
+        }
+
     }
 
 }
