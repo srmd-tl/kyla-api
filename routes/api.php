@@ -20,7 +20,7 @@ Route::post('register', [UserController::class, 'register'])->name('user.registe
 Route::post('login', [UserController::class, 'login'])->name('user.login');
 
 
-Route::middleware(['auth:api'])->group(function () {
+Route::middleware(['auth:api','verified'])->group(function () {
    //Update User Profile
     Route::post('updateProfile', [UserController::class, 'updateProfile'])->name('user.updateProfile');
     //Get Profile
@@ -75,6 +75,12 @@ Route::get('forget/{user}', [UserController::class, 'forget'])->name('forget');
 Route::put('forget/{user}', [UserController::class, 'forget'])->name('password.update');
 //Forget Password Link Generator
 Route::post('forgetLink', [UserController::class, 'mailForgetLink'])->name('user.forget');
+
+//Verify view
+Route::get('verify/{user}',[UserController::class,'verify'])->name('verify');
+//Resend Verification Email
+Route::post('resend/verify/{user}', [UserController::class, 'verify'])->name('verify.resend');
+
 
 //Fallback Routes
 Route::get('login', function () {

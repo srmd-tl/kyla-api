@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Mail\ForgetPassword;
+use App\Mail\VerficationMail;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -20,10 +22,6 @@ class UserController extends Controller
             [
                 "name" => "required|max:50",
                 "email" => "required|unique:users|email",
-                "race" => "required",
-                "gender" => "required",
-                "age" => "required",
-                "state" => "required",
                 "password" => "required"
             ]
         );
@@ -44,6 +42,8 @@ class UserController extends Controller
             $data["photo"] = $path;
         }
         $user = User::create($data);
+        //send verification email
+        Mail::to($user)->send(new VerficationMail($user));
         return response()->success($user);
     }
 
@@ -91,6 +91,20 @@ class UserController extends Controller
         }
         $user->update(["password" => Hash::make(request()->password), "api_token" => null]);
         return "Password UPdated!";
+    }
+
+    public function verify(User $user)
+    {
+        if (request()->method() == "GET") {
+            if (!request()->hasValidSignature()) {
+                abort(401);
+            }
+            $user->update(["email_verified_at" => Carbon::now()]);
+            return "User Verified";
+        }
+        Mail::to($user)->send(new VerficationMail($user));
+        return response()->success("Mail resent");
+
     }
 
     public function updateProfile()
