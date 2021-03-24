@@ -55,6 +55,11 @@ class UserController extends Controller
         $user = User::whereEmail(request()->email)->first();
         if ($user && Hash::check(request()->password, $user->password)) {
             $user->update(['api_token' => hash('sha256', $token)]);
+            if(!$user->email_verified_at)
+            {
+                return response()->error("Email not verified");
+
+            }
             Auth::login($user);
             $flag = true;
         }
