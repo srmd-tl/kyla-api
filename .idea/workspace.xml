@@ -29,9 +29,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="33912953-645b-4e76-81fe-725eb82a5aa4" name="Default Changelist" comment="contact">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/KylaProcessController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/KylaProcessController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/token.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/token.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +222,8 @@
       <workItem from="1607107530131" duration="29000" />
       <workItem from="1607756899466" duration="985000" />
       <workItem from="1618818150800" duration="6351000" />
-      <workItem from="1618911715981" duration="2335000" />
+      <workItem from="1618911715981" duration="2973000" />
+      <workItem from="1618923043406" duration="63000" />
     </task>
     <task id="LOCAL-00001" summary="updated users migration">
       <created>1605809510249</created>
