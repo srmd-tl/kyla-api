@@ -28,10 +28,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="33912953-645b-4e76-81fe-725eb82a5aa4" name="Default Changelist" comment="">
+    <list default="true" id="33912953-645b-4e76-81fe-725eb82a5aa4" name="Default Changelist" comment="contact">
+      <change beforePath="$PROJECT_DIR$/.idea/kyla-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kyla-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/KylaProcessController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/KylaProcessController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +45,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -163,6 +172,8 @@
       <path value="$PROJECT_DIR$/vendor/google/apiclient-services" />
       <path value="$PROJECT_DIR$/vendor/google/apiclient" />
       <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/jrean/laravel-user-verification" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1kWH2Ien1CEFwVkpJOcrJNULjA5" />
@@ -173,7 +184,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../saas-domain-finder" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -211,6 +222,8 @@
       <workItem from="1607019740125" duration="2549000" />
       <workItem from="1607107530131" duration="29000" />
       <workItem from="1607756899466" duration="985000" />
+      <workItem from="1618818150800" duration="6351000" />
+      <workItem from="1618911715981" duration="1170000" />
     </task>
     <task id="LOCAL-00001" summary="updated users migration">
       <created>1605809510249</created>
